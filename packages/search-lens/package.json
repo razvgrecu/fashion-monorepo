@@ -11,5 +11,11 @@
   "license": "ISC",
   "peerDependencies": {
     "@zoa-search/common": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.7.1",
+    "fastify-tsconfig": "^1.0.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
   }
 }

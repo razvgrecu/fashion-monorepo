@@ -8,9 +8,10 @@
     "prepare": "husky install",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "clean": "echo \"cleaning\"",
     "dev:api": "echo \"build and watch server using the development.env file\"",
-    "build:api": "echo \"build and watch server using the production.env file\""
+    "build:api": "echo \"build and watch server using the production.env file\"",
+    "compile": "pnpm -r ts:build",
+    "clean": "pnpm -r ts:clean"
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,7 @@
 {
-  "name": "@zoa-search/api",
-  "version": "1.0.0",
+  "name": "@fashion-search/api",
+  "private": true,
+  "version": "1.0.1",
   "description": "",
   "main": "app.ts",
   "scripts": {
@@ -8,6 +9,7 @@
     "clean": "rimraf node_modules dist",
     "ts:build": "tsc -p tsconfig.json",
     "ts:watch": "tsc -p tsconfig.json -w",
+    "ts:clean": "rimraf dist",
     "fastify:dev": "fastify start dist/app.js --watch --log-level info --pretty-logs --debug",
     "start": "fastify start dist/app.js -l info",
     "dev": "pnpm ts:build && concurrently -k -p \"[{name}]\" -n \"TypeScript,App\" -c \"bgMagenta,cyan.bold\" \"pnpm:ts:watch\" \"pnpm:fastify:dev\"",
@@ -17,8 +19,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@zoa-search/common": "workspace:*",
-    "@zoa-search/lens": "workspace:*",
+    "@fashion-search/common": "workspace:*",
+    "@fashion-search/lens": "workspace:*",
     "@fastify/autoload": "^5.0.0",
     "@fastify/sensible": "^5.0.0",
     "fastify": "^4.23.2",
@@ -27,11 +29,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.7.1",
+    "concurrently": "^7.0.0",
     "fastify-tsconfig": "^1.0.1",
     "rimraf": "^5.0.5",
-    "typescript": "^5.2.2",
-    "concurrently": "^7.0.0",
-    "ts-node": "^10.4.0"
+    "ts-node": "^10.4.0",
+    "typescript": "^5.2.2"
   },
   "directories": {
     "test": "test"

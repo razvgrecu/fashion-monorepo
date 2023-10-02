@@ -26,6 +26,6 @@ COPY --from=build /app/packages/poc-api/dist /app/packages/poc-api/dist
 EXPOSE 3000
 CMD [ "pnpm", "server:start"]
 
-#FROM common-package as zoa-ui
+#FROM common-package as fashion-ui
 #COPY --from=prod-deps /app/packages/poc-ui/node_modules/ /app/packages/poc-ui/node_modules
 #COPY --from=build /app/packages/poc-ui/dist /app/packages/poc-ui/dist

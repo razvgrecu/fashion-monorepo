@@ -39,14 +39,29 @@ importers:
         specifier: ^9.5.0
         version: 9.5.0
 
-  apps/poc-api:
+  packages/common:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.7.1
+        version: 20.7.1
+      fastify-tsconfig:
+        specifier: ^1.0.1
+        version: 1.0.1
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
+  packages/poc-api:
     dependencies:
       '@fashion-search/common':
         specifier: workspace:*
-        version: link:../../packages/common
+        version: link:../common
       '@fashion-search/lens':
         specifier: workspace:*
-        version: link:../../packages/search-lens
+        version: link:../search-lens
       '@fastify/autoload':
         specifier: ^5.0.0
         version: 5.7.1
@@ -78,21 +93,6 @@ importers:
       ts-node:
         specifier: ^10.4.0
         version: 10.9.1(@types/node@20.7.1)(typescript@5.2.2)
-      typescript:
-        specifier: ^5.2.2
-        version: 5.2.2
-
-  packages/common:
-    devDependencies:
-      '@types/node':
-        specifier: ^20.7.1
-        version: 20.7.1
-      fastify-tsconfig:
-        specifier: ^1.0.1
-        version: 1.0.1
-      rimraf:
-        specifier: ^5.0.5
-        version: 5.0.5
       typescript:
         specifier: ^5.2.2
         version: 5.2.2

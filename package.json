@@ -8,10 +8,9 @@
     "prepare": "husky install",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "dev:api": "echo \"build and watch server using the development.env file\"",
-    "build:api": "echo \"build and watch server using the production.env file\"",
-    "compile": "pnpm -r ts:build",
-    "clean": "pnpm -r ts:clean"
+    "build": "pnpm -r ts:build",
+    "clean": "pnpm -r ts:clean",
+    "server:start": "pnpm --filter @fashion-search/api start"
   },
   "keywords": [],
   "author": "",
